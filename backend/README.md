@@ -62,25 +62,30 @@ npm run dev
 
 ## Environment Variables
 
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `DB_HOST` | Database host | Yes |
-| `DB_USER` | Database username | Yes |
-| `DB_PASSWORD` | Database password | Yes |
-| `DB_NAME` | Database name | Yes |
-| `DB_PORT` | Database port | No (default: 3306) |
-| `JWT_SECRET` | JWT signing secret | Yes |
-| `PORT` | Server port | No (default: 5000) |
-| `NODE_ENV` | Environment | No (default: development) |
-| `MAILTRAP_HOST` | Email SMTP host | Yes |
-| `MAILTRAP_PORT` | Email SMTP port | Yes |
-| `MAILTRAP_USER` | Email username | Yes |
-| `MAILTRAP_PASS` | Email password | Yes |
-| `MAILTRAP_FROM_EMAIL` | From email address | Yes |
-| `MAILTRAP_FROM_NAME` | From name | Yes |
-| `FRONTEND_URL` | Frontend application URL | Yes |
-| `PAYMONGO_SECRET_KEY` | PayMongo secret key | No |
-| `WEBHOOK_SECRET_KEY` | Webhook secret key | No |
+-# Database Configuration
+-DB_HOST=localhost
+-DB_USER=root
+-DB_PASSWORD=
+-DB_NAME=fundeases_db
+
+-# JWT Secret
+-JWT_SECRET=supersecretkey
+
+-# Server Configuration
+-PORT=5000
+-NODE_ENV=development
+
+-# Gmail SMTP Configuration (REPLACES MAILTRAP)
+-MAILTRAP_HOST=smtp.gmail.com
+-MAILTRAP_PORT=587
+-MAILTRAP_USER=jungilcasquejo03@gmail.com
+-MAILTRAP_PASS=nyya aalo jful zsws
+-MAILTRAP_FROM_EMAIL=your-gmail-address@gmail.com
+-MAILTRAP_FROM_NAME=FundEase System
+
+-# Application URLs
+-FRONTEND_URL=http://localhost:5173
+-BACKEND_URL=http://localhost:5000
 
 ## API Endpoints
 
@@ -186,5 +191,6 @@ node test-email.js
 This project is licensed under the ISC License.
 
 ## Support
+
 
 For support and questions, please contact the development team or create an issue in the repository.
